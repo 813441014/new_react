@@ -1,0 +1,18 @@
+.typeName{
+    overflow: hidden;
+}
+.typeName div{
+   float: left;
+    width: 25%;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.typeName div img{
+   width: 18vw;
+    height: 18vw;
+    object-fit: cover;
+    border-radius: 100%;
+}
+.typeName div p{
+    line-height: 3vh;
+}

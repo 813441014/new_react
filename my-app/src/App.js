@@ -1,26 +1,56 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {Component} from 'react';
+import Router from './router/router'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import NavBottom from './pages/nav-bottom.jsx'
+import Index from './pages/index.jsx'
+// import Person from './pages/person.jsx'
+// import App from './pages/main.jsx'
+// import { render } from 'react-dom'
+// import { Router, Route} from 'react-router'
+//
+// React.render((
+//     <Router>
+//         <Route path="/" component={App}>
+//             <Route path="index" component={Index} />
+//             <Route path="person" component={Person} />
+//         </Route>
+//     </Router>
+// ), document.body)
+
+function Welcome(props){
+ return <h1>Hello,{props.name}</h1>
+}
+
+function handleClick(){
+console.log("hh")
+}
+
+
+class App extends Component {
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            posts: [],
+            comments: []
+        };
+
+    //    this.setState({
+        //         comments: response.comments
+        //       });
+    }
+    render() {
+        return (
+            < div >
+                {/*<Welcome name="shuiya "></Welcome>*/}
+                {/*<Index></Index>*/}
+                {/*<NavBottom onClick={handleClick} index="0"/>*/}
+                <Router></Router>
+            < /div>
+
+
+            )
+    }
 }
 
 export default App;

@@ -1,0 +1,15 @@
+.navor{
+background: #61dafb;
+}
+.navor img{
+    width: 20vw;
+    height: 20vw;
+    border-radius: 100%;
+    margin-right: 20px;
+}
+.navor .content{
+padding: 20px;
+    display: flex;
+}
+.navor .content img{
+}
