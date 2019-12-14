@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom'
+import axios from 'axios';
 require("./list.css")
 class List extends Component {
     constructor(props,context) {
@@ -12,6 +13,13 @@ class List extends Component {
        console.log("11")
         // this.props.history.push("/index-details")
         // this.context.router.history.push("/index-details")
+    }
+    componentDidMount() {
+        axios.get("http://localhost:3000/list.json",{
+            name:"weizhi "
+        }).then(function (response) {
+
+        })
     }
     render() {
         return (
