@@ -13,3 +13,35 @@ padding: 20px;
 }
 .navor .content img{
 }
+.navor .content p{
+    line-height: 10vw;
+    color: #ffffff;
+}
+
+
+.personUli{
+background: #f9f9f9;
+    padding-top: 10px;
+}
+.personUli ul{
+    list-style: none;
+
+    padding: 0 20px;
+    background: #ffffff;
+
+}
+.personUli ul li{
+    border-bottom: 1px solid #f3f3f3;
+    line-height: 15vw;
+    display: flex;
+    align-items: center;
+}
+.personUli img{
+    width: 10vw;
+    height: 10vw;
+    border-radius: 100%;
+    margin-right: 10px;
+}
+.personUli ul li span{
+    color: #61dafb;
+}

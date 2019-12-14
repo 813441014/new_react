@@ -9,7 +9,10 @@ class Index extends Component {
             <div className="contaniner">
                 <Banner></Banner>
                 <Type></Type>
-                <List></List>
+                <List history={111111}></List>
+                <div>
+                    sdggds
+                </div>
             </div>
         );
     }

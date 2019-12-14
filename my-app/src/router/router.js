@@ -1,7 +1,9 @@
 import React, {Component} from "react";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router,Redirect, Route, Link } from "react-router-dom";
 import Person from '../pages/person.jsx'
+import Main from '../pages/nav-bottom.jsx'
 import Index from '../pages/index.jsx'
+import IndexDetails from '../pages/index-details.jsx'
 require("../pages/nav-bottom.css")
 
 // function handleTap(e){
@@ -39,23 +41,31 @@ class NavBottom extends Component {
     render() {
         return (
                     <Router>
-            <div >
+            {/*<div >*/}
 
 
-                <Route exact path="/" component={Index} />
-                <Route path="/person" component={Person} />
-
-                <ul className="nav">
-                    <li data-index="0" onClick={this.handleTap} className={this.state.index === "0"?'active':''}>
-                        <Link to="/">首页</Link>
-                    </li>
-                    <li data-index="1" onClick={this.handleTap} className={this.state.index === "1"?'active':''}>
-                        <Link to="/person">个人中心</Link>
-                    </li>
-                </ul>
 
 
-            </div>
+                <Route  path="/">
+                    <Redirect exact from = "/" to ="/index"/>
+                    <ul className="nav">
+                        <li data-index="0" onClick={this.handleTap} className={this.state.index === "0"?'active':''}>
+                            <Link to="/index">首页</Link>
+                        </li>
+                        <li data-index="1" onClick={this.handleTap} className={this.state.index === "1"?'active':''}>
+                            <Link to="/person">个人中心</Link>
+                        </li>
+                    </ul>
+                    <Route  path="/index" component={Index} />
+                    <Route path="/person" component={Person} />
+                </Route>
+
+                        <Route path="/index-details" component={IndexDetails} />
+
+
+
+
+            {/*</div>*/}
         </Router>
         );
     }

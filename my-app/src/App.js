@@ -1,8 +1,10 @@
 import React, {Component} from 'react';
 import Router from './router/router'
+import AllRouter from './router/all-router'
 
 import NavBottom from './pages/nav-bottom.jsx'
 import Index from './pages/index.jsx'
+import {Redirect, Route} from "react-router";
 // import Person from './pages/person.jsx'
 // import App from './pages/main.jsx'
 // import { render } from 'react-dom'
@@ -44,7 +46,7 @@ class App extends Component {
             < div >
                 {/*<Welcome name="shuiya "></Welcome>*/}
                 {/*<Index></Index>*/}
-                {/*<NavBottom onClick={handleClick} index="0"/>*/}
+                {/*<NavBottom/>*/}
                 <Router></Router>
             < /div>
 
