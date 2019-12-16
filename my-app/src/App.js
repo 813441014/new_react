@@ -1,10 +1,10 @@
 import React, {Component} from 'react';
-import Router from './router/router'
+import RouterView from './router/router'
 import AllRouter from './router/all-router'
-
 import NavBottom from './pages/nav-bottom.jsx'
 import Index from './pages/index.jsx'
 import {Redirect, Route} from "react-router";
+import {BrowserRouter as Router,Link} from "react-router-dom";
 // import Person from './pages/person.jsx'
 // import App from './pages/main.jsx'
 // import { render } from 'react-dom'
@@ -34,12 +34,20 @@ class App extends Component {
         super(props);
         this.state = {
             posts: [],
-            comments: []
+            comments: [],
+            index:0
         };
 
     //    this.setState({
         //         comments: response.comments
         //       });
+    }
+    handleTap(e){
+        console.log(e)
+        console.log(e.target.dataset.index);
+        this.setState({
+            index:e.currentTarget.dataset.index
+        });
     }
     render() {
         return (
@@ -47,7 +55,9 @@ class App extends Component {
                 {/*<Welcome name="shuiya "></Welcome>*/}
                 {/*<Index></Index>*/}
                 {/*<NavBottom/>*/}
-                <Router></Router>
+
+
+                <RouterView></RouterView>
             < /div>
 
 

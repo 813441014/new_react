@@ -4,6 +4,7 @@ import Person from '../pages/person.jsx'
 import Main from '../pages/nav-bottom.jsx'
 import Index from '../pages/index.jsx'
 import IndexDetails from '../pages/index-details.jsx'
+import IndexDetailsType from '../pages/index-details/type.jsx'
 require("../pages/nav-bottom.css")
 
 // function handleTap(e){
@@ -40,33 +41,15 @@ class NavBottom extends Component {
     }
     render() {
         return (
-                    <Router>
-            {/*<div >*/}
-
-
-
-
+              <Router>
                 <Route  path="/">
-                    <Redirect exact from = "/" to ="/index"/>
-                    <ul className="nav">
-                        <li data-index="0" onClick={this.handleTap} className={this.state.index === "0"?'active':''}>
-                            <Link to="/index">首页</Link>
-                        </li>
-                        <li data-index="1" onClick={this.handleTap} className={this.state.index === "1"?'active':''}>
-                            <Link to="/person">个人中心</Link>
-                        </li>
-                    </ul>
-                    <Route  path="/index" component={Index} />
+                    <Route path="/index" component={Index} />
                     <Route path="/person" component={Person} />
+                    <Redirect exact from = "/" to ="/index"/>
                 </Route>
-
-                        <Route path="/index-details" component={IndexDetails} />
-
-
-
-
-            {/*</div>*/}
-        </Router>
+                <Route path="/index-details" component={IndexDetails} />
+                <Route path="/index-details-type" component={IndexDetailsType} />
+              </Router>
         );
     }
 }

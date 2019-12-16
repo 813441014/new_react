@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import Navor from "./navor.jsx"
+import NavBottom from "./nav-bottom";
 class Person extends Component {
     render() {
         return (
@@ -36,6 +37,7 @@ class Person extends Component {
                             </span></li>
                     </ul>
                 </div>
+                <NavBottom index="1"></NavBottom>
             </div>
         );
     }
