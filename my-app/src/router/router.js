@@ -3,6 +3,8 @@ import { BrowserRouter as Router,Redirect, Route, Link } from "react-router-dom"
 import Person from '../pages/person.jsx'
 import Main from '../pages/nav-bottom.jsx'
 import Index from '../pages/index.jsx'
+import Login from '../pages/login/login.jsx'
+import Register from '../pages/register/register.jsx'
 import IndexDetails from '../pages/index-details.jsx'
 import IndexDetailsType from '../pages/index-details/type.jsx'
 require("../pages/nav-bottom.css")
@@ -43,10 +45,13 @@ class NavBottom extends Component {
         return (
               <Router>
                 <Route  path="/">
-                    <Route path="/index" component={Index} />
-                    <Route path="/person" component={Person} />
-                    <Redirect exact from = "/" to ="/index"/>
+
+                    <Redirect exact from = "/" to ="/login"/>
                 </Route>
+                  <Route path="/login" component={Login} />
+                  <Route path="/register" component={Register} />
+                  <Route path="/index" component={Index} />
+                  <Route path="/person" component={Person} />
                 <Route path="/index-details" component={IndexDetails} />
                 <Route path="/index-details-type" component={IndexDetailsType} />
               </Router>

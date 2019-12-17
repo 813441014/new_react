@@ -1,0 +1,44 @@
+.register{
+
+    padding: 0 20px;
+
+}
+.registerBox{
+    display: flex;
+    align-items: center;
+    line-height: 44px;
+    border-bottom: 1px solid #f3f3f3;
+}
+.register>div:nth-of-type(2){
+    margin-top: 20%;
+}
+.registerBox p{
+    width: 100px;
+    text-align: right;
+    font-size: 14px;
+}
+.registerBox div{
+    flex: 1;
+    margin-left: 20px;
+}
+.registerBox div input{
+    width: 100%;
+    line-height: 44px;
+    border: none;
+    font-size: 14px;
+}
+.loginBtn{
+    background: #61dafb;
+    color: #ffffff;
+    text-align: center;
+    line-height: 44px;
+    margin-top: 30px;
+    border-radius: 20px;
+}
+.title{
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    line-height: 44px;
+    /*border-bottom: 1px solid #f3f3f3;*/
+}
