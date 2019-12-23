@@ -1,10 +1,11 @@
 import React, {Component} from 'react';
-import Navor from "./navor.jsx"
+import Navor from "./navor.jsx";
 import NavBottom from "./nav-bottom";
+require("./person.css");
 class Person extends Component {
     render() {
         return (
-            <div>
+            <div className="container">
                 <Navor></Navor>
                 <div className="personUli">
                     <ul>

@@ -23,7 +23,7 @@ class Register extends Component {
             alert("前后不一致");
             return false
         }
-        axios.post("http://localhost:3006/string",
+        axios.post("http://localhost:3006/register",
             qs.stringify({
                 name:this.state.name,
                 pass:this.state.pass,

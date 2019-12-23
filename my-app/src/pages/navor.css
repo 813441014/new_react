@@ -1,5 +1,6 @@
 .navor{
-background: #61dafb;
+background: url("../static/image/background.jpg") no-repeat left top ;
+    background-size: cover;
 }
 .navor img{
     width: 20vw;
@@ -10,6 +11,8 @@ background: #61dafb;
 .navor .content{
 padding: 20px;
     display: flex;
+    align-items: center;
+    height: 30vh;
 }
 .navor .content img{
 }
@@ -43,5 +46,5 @@ background: #f9f9f9;
     margin-right: 10px;
 }
 .personUli ul li span{
-    color: #61dafb;
+    color: #3c3ca2;
 }

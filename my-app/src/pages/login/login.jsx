@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 import { withRouter } from 'react-router'
+import axios from "axios";
+import qs from "qs";
 require("./login.css")
 
 console.log(withRouter)
@@ -7,8 +9,8 @@ class Login extends Component {
     constructor(props){
         super(props);
         this.state = {
-            name:"",
-            password:""
+            name: localStorage.getItem("name"),
+            password:localStorage.getItem("pass")
         }
         this.nameInp = this.nameInp.bind(this);//手动绑定
         this.passInp = this.passInp.bind(this);//手动绑定
@@ -27,7 +29,21 @@ class Login extends Component {
         }))
     }
     login(){
-        console.log(this.state.name)
+        console.log(this.state.name);
+        var _self = this;
+        axios.post("http://localhost:3006/login",
+            qs.stringify({
+                name:this.state.name,
+                pass:this.state.password,
+            })
+        ).then(function (response) {
+            if(response.data.length > 0){
+                localStorage.setItem("name",_self.state.name);
+                localStorage.setItem("pass",_self.state.password);
+                _self.props.history.push("/index")
+            }
+
+        })
     }
     loginTo(){
         console.log(this.props.history)

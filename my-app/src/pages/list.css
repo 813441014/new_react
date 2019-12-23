@@ -27,6 +27,7 @@
     -webkit-line-clamp: 2;
     line-clamp: 2;
     -webkit-box-orient: vertical;
+    line-height: 26px;
 }
 .uli .content .desc{
     color: #999999;
