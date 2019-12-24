@@ -10,32 +10,21 @@ class Person extends Component {
                 <div className="personUli">
                     <ul>
                         <li>
-                            <img src={[require("../static/image/type.jpg")]} alt=""/>
+                            <i className="iconfont icon-tongzhi"></i>
                             <span>个人中心</span></li>
                         <li>
-                            <img src={[require("../static/image/type.jpg")]} alt=""/>
+                            <i className="iconfont icon-fabu2"></i>
 
                             <span>我的关注</span></li>
                         <li>
-                            <img src={[require("../static/image/type.jpg")]} alt=""/>
+                            <i className="iconfont icon-shoucang1"></i>
 
                             <span>我的收藏</span></li>
                         <li>
-                            <img src={[require("../static/image/type.jpg")]} alt=""/>
-                            <span>个人中心</span></li>
-                        <li>
-                            <img src={[require("../static/image/type.jpg")]} alt=""/>
-
-                            <span>我的关注</span></li>
-                        <li>
-                            <img src={[require("../static/image/type.jpg")]} alt=""/>
+                            <i className="iconfont icon-tuichu"></i>
 
                             <span>我的收藏</span></li>
-                        <li>
-                            <img src={[require("../static/image/type.jpg")]} alt=""/>
-                            <span>
-                                设置
-                            </span></li>
+
                     </ul>
                 </div>
                 <NavBottom index="1"></NavBottom>

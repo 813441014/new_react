@@ -11,7 +11,7 @@
 .nav div{
     flex: 1;
     text-align: center;
-    line-height: 49px;
+
 
 }
 
@@ -27,6 +27,14 @@
     text-decoration: none;
     color: #666;
     display: block;
+}
+.nav a p{
+    line-height: 20px;
+    font-size: 14px;
+}
+.nav a i{
+    line-height: 30px;
+    font-size: 22px;
 }
 .nav li{
     flex: 1;

@@ -5,7 +5,7 @@ class Navor extends Component {
         return (
             <div className="navor">
                 <div className="content">
-                    <img src={[require("../static/image/banner.png")]} alt=""/>
+                    <img src={[require("../static/image/navor.jpg")]} alt=""/>
                     <div >
                         <p>名称</p>
                         <p>超级会员</p>

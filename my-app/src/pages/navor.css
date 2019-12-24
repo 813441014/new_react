@@ -39,10 +39,11 @@ background: #f9f9f9;
     display: flex;
     align-items: center;
 }
-.personUli img{
-    width: 10vw;
-    height: 10vw;
-    border-radius: 100%;
+.personUli i{
+
+   font-size: 20px;
+    line-height: 15vw;
+    color: #3c3ca2;
     margin-right: 10px;
 }
 .personUli ul li span{

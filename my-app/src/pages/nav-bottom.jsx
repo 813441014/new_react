@@ -31,11 +31,15 @@ class NavBottom extends Component {
         return (
             <div className="nav">
                  <div data-index="0" onClick={this.handleTap} className={this.state.index === "0"?'active':''}>
-                     <Link to="/index">首页</Link>
+                     <Link to="/index">
+                         <i className="iconfont icon-shouye1"></i>
+                         <p>首页</p></Link>
                  </div>
 
                 <div data-index="1" onClick={this.handleTap} className={this.state.index === "1"?'active':''}>
-                    <Link to="/person">个人中心</Link>
+                    <Link to="/person">
+                        <i className="iconfont icon-wode1"></i>
+                        <p>个人中心</p></Link>
                 </div>
             </div>
         );

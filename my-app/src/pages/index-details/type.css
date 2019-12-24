@@ -1,0 +1,27 @@
+.scrollView{
+overflow: scroll;
+}
+.scrollView p{
+    float: left;
+    margin-right: 20px;
+    width: 50px;
+    text-align: center;
+}
+.scrollView .active{
+    color: #3c3ca2;
+    position: relative;
+}
+.scrollView .active:after{
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 15px;
+    right: 15px;
+    height: 1px;
+    width: 20px;
+    background: #3c3ca2;
+}
+.overView{
+    width: 1200px;
+    line-height: 30px;
+}
