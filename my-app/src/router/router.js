@@ -7,6 +7,7 @@ import Login from '../pages/login/login.jsx'
 import Register from '../pages/register/register.jsx'
 import IndexDetails from '../pages/index-details.jsx'
 import IndexDetailsType from '../pages/index-details/type.jsx'
+import add from '../pages/add/add.jsx'
 require("../pages/nav-bottom.css")
 
 // function handleTap(e){
@@ -54,6 +55,7 @@ class NavBottom extends Component {
                   <Route path="/person" component={Person} />
                 <Route path="/index-details" component={IndexDetails} />
                 <Route path="/index-details-type" component={IndexDetailsType} />
+                <Route path="/add" component={add} />
               </Router>
         );
     }

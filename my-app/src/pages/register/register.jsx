@@ -1,16 +1,19 @@
 import React, {Component} from 'react';
 import axios from "axios";
 import qs from "qs";
+import store from '../../store/index.js'; // './store/index.js'的简写
 require("./register.css")
 class Register extends Component {
     constructor(props){
         super(props);
-        this.state = {
-            name:"",
-            pass:"",
-            phone:"",
-            surepass:""
-        }
+        // this.state = {
+        //     name:"",
+        //     pass:"",
+        //     phone:"",
+        //     surepass:""
+        // }
+        this.state = store.getState();
+        console.log(this.state)
         this.register = this.register.bind(this);//手动绑定
         this.nameInp = this.nameInp.bind(this);//手动绑定
         this.passInp = this.passInp.bind(this);//手动绑定

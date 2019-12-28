@@ -46,3 +46,19 @@
      color: #3c3ca2;
 
  }
+
+.posiDiv{
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    background: #3c3ca2;
+    color: #ffffff;
+    border-radius: 100%;
+}
+.posiDiv i{
+    color: #fff;
+}

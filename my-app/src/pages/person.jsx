@@ -23,7 +23,7 @@ class Person extends Component {
                         <li>
                             <i className="iconfont icon-tuichu"></i>
 
-                            <span>我的收藏</span></li>
+                            <span>退出</span></li>
 
                     </ul>
                 </div>

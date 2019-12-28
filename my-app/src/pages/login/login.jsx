@@ -2,16 +2,19 @@ import React, {Component} from 'react';
 import { withRouter } from 'react-router'
 import axios from "axios";
 import qs from "qs";
+import store from '../../store/index.js'; // './store/index.js'的简写
 require("./login.css")
 
 console.log(withRouter)
 class Login extends Component {
     constructor(props){
         super(props);
-        this.state = {
-            name: localStorage.getItem("name"),
-            password:localStorage.getItem("pass")
-        }
+        // this.state = {
+        //     name: localStorage.getItem("name"),
+        //     password:localStorage.getItem("pass")
+        // }
+        this.state = store.getState();
+        console.log(store.getState())
         this.nameInp = this.nameInp.bind(this);//手动绑定
         this.passInp = this.passInp.bind(this);//手动绑定
         this.login = this.login.bind(this);//手动绑定
@@ -25,7 +28,7 @@ class Login extends Component {
     }
     passInp(e){
         this.setState(({
-            password:e.target.value
+            pass:e.target.value
         }))
     }
     login(){
@@ -34,12 +37,22 @@ class Login extends Component {
         axios.post("http://localhost:3006/login",
             qs.stringify({
                 name:this.state.name,
-                pass:this.state.password,
+                pass:this.state.pass,
             })
         ).then(function (response) {
             if(response.data.length > 0){
                 localStorage.setItem("name",_self.state.name);
-                localStorage.setItem("pass",_self.state.password);
+                localStorage.setItem("pass",_self.state.pass);
+                const name = {
+                    type:"name",
+                    value:_self.state.name
+                }
+                const pass = {
+                    type:"pass",
+                    value:_self.state.pass
+                }
+                store.dispatch(name); // 解析action
+                store.dispatch(pass); // 解析action
                 _self.props.history.push("/index")
             }
 
@@ -66,7 +79,7 @@ class Login extends Component {
                     <div className="loginBox">
                         <p>密码</p>
                         <div>
-                            <input type="password" placeholder="请输入密码" defaultValue={this.state.password} onChange={this.passInp}/>
+                            <input type="password" placeholder="请输入密码" defaultValue={this.state.pass} onChange={this.passInp}/>
                         </div>
                     </div>
                     <div className="loginBtn" onClick={this.login}>登录</div>

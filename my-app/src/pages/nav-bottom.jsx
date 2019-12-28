@@ -36,6 +36,12 @@ class NavBottom extends Component {
                          <p>首页</p></Link>
                  </div>
 
+                <div className="posiDiv">
+                    <Link to="/add">
+                        <i className="iconfont icon-add"></i>
+                    </Link>
+                </div>
+
                 <div data-index="1" onClick={this.handleTap} className={this.state.index === "1"?'active':''}>
                     <Link to="/person">
                         <i className="iconfont icon-wode1"></i>
