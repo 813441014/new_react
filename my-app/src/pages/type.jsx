@@ -8,6 +8,7 @@ class Type extends Component {
             index : props.index,
         };
         this.tap = this.tap.bind(this);//手动绑定
+        this.tap_list = this.tap_list.bind(this);
 
 }
     tap(){
@@ -16,6 +17,9 @@ class Type extends Component {
       this.props.history.push("/index-details-type")
         // console.log(this.props.history);
     }
+    tap_list(){
+        this.props.history.push("/list")
+    }
     render() {
         return (
             <div className="typeName">
@@ -23,7 +27,7 @@ class Type extends Component {
                     <img src={[require("../static/image/type.jpg")]} alt=""/>
                     <p>悬疑</p>
                 </div>
-                <div>
+                <div  onClick={this.tap_list}>
                     <img src={[require("../static/image/type.jpg")]} alt=""/>
                     <p>悬疑</p>
                 </div>

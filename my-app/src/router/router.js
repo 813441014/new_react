@@ -8,6 +8,7 @@ import Register from '../pages/register/register.jsx'
 import IndexDetails from '../pages/index-details.jsx'
 import IndexDetailsType from '../pages/index-details/type.jsx'
 import add from '../pages/add/add.jsx'
+import list from '../pages/list/list.jsx'
 require("../pages/nav-bottom.css")
 
 // function handleTap(e){
@@ -56,6 +57,7 @@ class NavBottom extends Component {
                 <Route path="/index-details" component={IndexDetails} />
                 <Route path="/index-details-type" component={IndexDetailsType} />
                 <Route path="/add" component={add} />
+                <Route path="/list" component={list} />
               </Router>
         );
     }
