@@ -32,6 +32,7 @@ class Login extends Component {
         }))
     }
     login(){
+        this.props.history.push("/index")
         console.log(this.state.name);
         var _self = this;
         axios.post("http://localhost:3006/login",

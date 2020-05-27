@@ -64,3 +64,9 @@ line-height: 50px;
 .add_file i{
     font-size: 38px;
 }
+.label_div div{
+    flex: 1;
+}
+.label_div div input{
+    width: 100%;
+}

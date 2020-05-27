@@ -1,2 +1,4 @@
 /node_modules/
 /.idea/
+my-app/src/pages/add/add.css
+my-app/src/pages/login/login.jsx

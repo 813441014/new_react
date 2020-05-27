@@ -5,6 +5,7 @@ import './static/fonts/iconfont.css';
 import './pages/common.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import "./until/request";
 
 ReactDOM.render(<App />, document.getElementById('root'));
 
